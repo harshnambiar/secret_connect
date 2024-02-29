@@ -1,29 +1,65 @@
-// to add: leap, starshell, fina
 
-async function connect() {
+
+async function connect_keplr() {
     if (!window.keplr) {
         throw ("Please install keplr extension");
     } else {
         try {
-        const chainId = "cosmoshub-4";
+            const chainId = "cosmoshub-4";
 
-        // Enabling before using the Keplr is recommended.
-        // This method will ask the user whether to allow access if they haven't visited this website.
-        // Also, it will request that the user unlock the wallet if the wallet is locked.
-        await window.keplr.enable(chainId);
-    
-        const offlineSigner = window.keplr.getOfflineSigner(chainId);
-    
-        // You can get the address/public keys by `getAccounts` method.
-        // It can return the array of address/public key.
-        // But, currently, Keplr extension manages only one address/public key pair.
-        // XXX: This line is needed to set the sender address for SigningCosmosClient.
-        const accounts = await offlineSigner.getAccounts();
-        console.log(accounts);
+            await window.keplr.enable(chainId);
+        
+            const offlineSigner = window.keplr.getOfflineSigner(chainId);
+        
+            const accounts = await offlineSigner.getAccounts();
+            console.log(accounts[0].address);
         
         } catch (err){
             console.log(err);
         }
     }
 }
-window.connect = connect;
+window.connect_keplr = connect_keplr;
+
+
+async function connect_leap() {
+    if (!window.leap) {
+        throw ("Please install leap extension");
+    } else {
+        try {
+            const chainId = "cosmoshub-4";
+
+            await window.leap.enable(chainId);
+        
+            const offlineSigner = window.leap.getOfflineSigner(chainId);
+        
+            const accounts = await offlineSigner.getAccounts();
+            console.log(accounts[0].address);
+        
+        } catch (err){
+            console.log(err);
+        }
+    }
+}
+window.connect_leap = connect_leap;
+
+
+
+async function connect_cosmostation() {
+    if (!window.cosmostation) {
+        throw ("Please install cosmostation extension");
+    } else {
+        try {
+            const chainId = "cosmoshub-4";
+            const account = await window.cosmostation.cosmos.request({
+                method: "cos_requestAccount",
+                params: { chainName: chainId },
+              });
+            console.log(account.address);
+        
+        } catch (err){
+            console.log(err);
+        }
+    }
+}
+window.connect_cosmostation = connect_cosmostation;
