@@ -22,6 +22,14 @@ module.exports = {
         loader: "html-loader",
       },
     ],
+    
+  },
+  resolve: {
+    fallback: {
+      
+      "assert": false,
+      "path": require.resolve('path-browserify'),
+    } 
   },
   devServer: {
     static: {

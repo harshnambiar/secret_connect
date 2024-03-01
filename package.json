@@ -10,6 +10,7 @@
         "axios": "^1.6.7",
         "crypto-js": "^4.2.0",
         "leaflet": "^1.9.3",
+        "path-browserify": "^1.0.1",
         "vue-recaptcha": "^2.0.3",
         "webpack": "^5.74.0",
         "webpack-cli": "^4.10.0"

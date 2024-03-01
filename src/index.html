@@ -58,7 +58,14 @@
       <div class="row">
         <div class="col-lg-2 mx-auto">
           <div class="homeText">A dapp by Covert Labs</div>
-          
+          <a class="walletBtn" onclick="createCaptcha();">Generate Captcha</a>
+          <br/> <br/> <br/> <br/> 
+          <canvas id="captcha" width="130" height="80"></canvas>
+          <form id="cap_form"  onsubmit="validateCaptcha()">
+            
+            <input type="text" placeholder="Captcha" id="cpatchaTextBox"/><br/><br/>
+            <button type="submit">Submit</button>
+          </form>
         </div>
       </div>
       <br/><br/>
