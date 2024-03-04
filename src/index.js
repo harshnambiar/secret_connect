@@ -79,7 +79,7 @@ async function createCaptcha() {
     }
 
     console.log(captcha);
-    addTextToImage('./img/home.png', captcha);
+    addTextToImage('https://5.imimg.com/data5/GL/TG/MY-45342195/wall-textures.jpg', captcha);
     
   }
   window.createCaptcha = createCaptcha;
@@ -93,10 +93,10 @@ async function createCaptcha() {
     var order = Math.floor(Math.random() * 6);
     var img = new Image();
     img.src = imagePath;
-    img.height = 300;
-    img.width = 300;
-    var shift1 = 30 + Math.floor(Math.random() * 5);
-    var shift2 = 20 + shift1 - Math.floor(Math.random() * 5);
+    img.height = 600;
+    img.width = 600;
+    var shift1 = 55 + Math.floor(Math.random() * 5);
+    var shift2 = 35 + shift1 - Math.floor(Math.random() * 5);
     if (order == 0) {
         var text1 = text.substring(0, 3);
         var text2 = text.substring(3, 6);
@@ -106,16 +106,16 @@ async function createCaptcha() {
             context.lineWidth = 1;
             context.fillStyle = "#FFFFFF";
             context.lineStyle = "#ffff00";
-            context.font = "18px bold sans-serif";
-            context.fillText(text1, 5, 20);
-            context.fillStyle = "magenta";
+            context.font = "25px bold courier";
+            context.fillText(text1, 5, 35);
+            context.fillStyle = "indigo";
             context.lineStyle = "#ffff00";
-            context.font = "18px bold sans-serif";
-            context.fillText(text2, 50, shift1);
+            context.font = "25px bold courier";
+            context.fillText(text2, 70, shift1);
             context.fillStyle = "#FF0000";
             context.lineStyle = "#ffff00";
-            context.font = "18px bold sans-serif";
-            context.fillText(text3, 80, shift2);
+            context.font = "25px bold courier";
+            context.fillText(text3, 140, shift2);
         };
     }
 
@@ -129,16 +129,16 @@ async function createCaptcha() {
             context.lineWidth = 1;
             context.fillStyle = "#FFFFFF";
             context.lineStyle = "#ffff00";
-            context.font = "18px sans-serif";
-            context.fillText(text1, 5, 20);
+            context.font = "25px bold courier";
+            context.fillText(text1, 5, 35);
             context.fillStyle = "#FF0000";
             context.lineStyle = "#ffff00";
-            context.font = "18px sans-serif";
-            context.fillText(text2, 50, shift1);
-            context.fillStyle = "magenta";
+            context.font = "25px bold courier";
+            context.fillText(text2, 70, shift1);
+            context.fillStyle = "indigo";
             context.lineStyle = "#ffff00";
-            context.font = "18px sans-serif";
-            context.fillText(text3, 80, shift2);
+            context.font = "25px bold courier";
+            context.fillText(text3, 140, shift2);
         };
 
     }
@@ -151,16 +151,16 @@ async function createCaptcha() {
             context.lineWidth = 1;
             context.fillStyle = "#FF0000";
             context.lineStyle = "#ffff00";
-            context.font = "18px sans-serif";
-            context.fillText(text1, 5, 20);
+            context.font = "25px bold courier";
+            context.fillText(text1, 5, 35);
             context.fillStyle = "#FFFFFF";
             context.lineStyle = "#ffff00";
-            context.font = "18px sans-serif";
-            context.fillText(text2, 50, shift1);
-            context.fillStyle = "magenta";
+            context.font = "25px bold courier";
+            context.fillText(text2, 70, shift1);
+            context.fillStyle = "indigo";
             context.lineStyle = "#ffff00";
-            context.font = "18px sans-serif";
-            context.fillText(text3, 80, shift2);
+            context.font = "25px bold courier";
+            context.fillText(text3, 140, shift2);
         };
 
     }
@@ -171,18 +171,18 @@ async function createCaptcha() {
         img.onload = function () {
             context.drawImage(img, 0, 0);
             context.lineWidth = 1;
-            context.fillStyle = "magenta";
+            context.fillStyle = "indigo";
             context.lineStyle = "#ffff00";
-            context.font = "18px sans-serif";
-            context.fillText(text1, 5, 20);
+            context.font = "25px bold courier";
+            context.fillText(text1, 5, 35);
             context.fillStyle = "#FFFFFF";
             context.lineStyle = "#ffff00";
-            context.font = "18px sans-serif";
-            context.fillText(text2, 50, shift1);
+            context.font = "25px bold courier";
+            context.fillText(text2, 70, shift1);
             context.fillStyle = "#FF0000";
             context.lineStyle = "#ffff00";
-            context.font = "18px sans-serif";
-            context.fillText(text3, 80, shift2);
+            context.font = "25px bold courier";
+            context.fillText(text3, 140, shift2);
         };
 
     }
@@ -193,18 +193,18 @@ async function createCaptcha() {
         img.onload = function () {
             context.drawImage(img, 0, 0);
             context.lineWidth = 1;
-            context.fillStyle = "magenta";
+            context.fillStyle = "indigo";
             context.lineStyle = "#ffff00";
-            context.font = "18px sans-serif";
-            context.fillText(text1, 5, 20);
+            context.font = "25px bold courier";
+            context.fillText(text1, 5, 35);
             context.fillStyle = "#FF0000";
             context.lineStyle = "#ffff00";
-            context.font = "18px sans-serif";
-            context.fillText(text2, 50, shift1);
+            context.font = "25px bold courier";
+            context.fillText(text2, 70, shift1);
             context.fillStyle = "#FFFFFF";
             context.lineStyle = "#ffff00";
-            context.font = "18px sans-serif";
-            context.fillText(text3, 80, shift2);
+            context.font = "25px bold courier";
+            context.fillText(text3, 140, shift2);
         };
 
     }
@@ -217,16 +217,16 @@ async function createCaptcha() {
             context.lineWidth = 1;
             context.fillStyle = "#FF0000";
             context.lineStyle = "#ffff00";
-            context.font = "18px sans-serif";
-            context.fillText(text1, 5, 20);
-            context.fillStyle = "magenta";
+            context.font = "25px bold courier";
+            context.fillText(text1, 5, 35);
+            context.fillStyle = "indigo";
             context.lineStyle = "#ffff00";
-            context.font = "18px sans-serif";
-            context.fillText(text2, 50, shift1);
+            context.font = "25px bold courier";
+            context.fillText(text2, 70, shift1);
             context.fillStyle = "#FFFFFF";
             context.lineStyle = "#ffff00";
-            context.font = "18px sans-serif";
-            context.fillText(text3, 80, shift2);
+            context.font = "25px bold courier";
+            context.fillText(text3, 140, shift2);
         };
 
     }
