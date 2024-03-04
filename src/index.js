@@ -71,7 +71,7 @@ async function createCaptcha() {
     document.getElementById('captcha').innerHTML = "";
     var charsArray =
     "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    var lengthOtp = 10;
+    var lengthOtp = 9;
     var captcha = "";
     for (var i = 0; i < lengthOtp; i++) {
         var index = Math.floor(Math.random() * charsArray.length); //get the next character from the array
@@ -89,20 +89,149 @@ async function createCaptcha() {
     var circle_canvas = document.getElementById("captcha");
     var context = circle_canvas.getContext("2d");
 
-    // Draw Image function
+    console.log(text);
+    var order = Math.floor(Math.random() * 6);
     var img = new Image();
     img.src = imagePath;
     img.height = 300;
     img.width = 300;
-    img.onload = function () {
-        context.drawImage(img, 0, 0);
-        context.lineWidth = 1;
-        context.fillStyle = "#FFFFFF";
-        context.lineStyle = "#ffff00";
-        context.font = "18px sans-serif";
-        context.fillText(text, 5, 20);
-    };
+    var shift1 = 30 + Math.floor(Math.random() * 5);
+    var shift2 = 20 + shift1 - Math.floor(Math.random() * 5);
+    if (order == 0) {
+        var text1 = text.substring(0, 3);
+        var text2 = text.substring(3, 6);
+        var text3 = text.substring(6, 9);
+        img.onload = function () {
+            context.drawImage(img, 0, 0);
+            context.lineWidth = 1;
+            context.fillStyle = "#FFFFFF";
+            context.lineStyle = "#ffff00";
+            context.font = "18px bold sans-serif";
+            context.fillText(text1, 5, 20);
+            context.fillStyle = "magenta";
+            context.lineStyle = "#ffff00";
+            context.font = "18px bold sans-serif";
+            context.fillText(text2, 50, shift1);
+            context.fillStyle = "#FF0000";
+            context.lineStyle = "#ffff00";
+            context.font = "18px bold sans-serif";
+            context.fillText(text3, 80, shift2);
+        };
+    }
+
+    
+    else if (order == 1) {
+        var text1 = text.substring(0, 3);
+        var text3 = text.substring(3, 6);
+        var text2 = text.substring(6, 9);
+        img.onload = function () {
+            context.drawImage(img, 0, 0);
+            context.lineWidth = 1;
+            context.fillStyle = "#FFFFFF";
+            context.lineStyle = "#ffff00";
+            context.font = "18px sans-serif";
+            context.fillText(text1, 5, 20);
+            context.fillStyle = "#FF0000";
+            context.lineStyle = "#ffff00";
+            context.font = "18px sans-serif";
+            context.fillText(text2, 50, shift1);
+            context.fillStyle = "magenta";
+            context.lineStyle = "#ffff00";
+            context.font = "18px sans-serif";
+            context.fillText(text3, 80, shift2);
+        };
+
+    }
+    else if (order == 2) {
+        var text3 = text.substring(0, 3);
+        var text1 = text.substring(3, 6);
+        var text2 = text.substring(6, 9);
+        img.onload = function () {
+            context.drawImage(img, 0, 0);
+            context.lineWidth = 1;
+            context.fillStyle = "#FF0000";
+            context.lineStyle = "#ffff00";
+            context.font = "18px sans-serif";
+            context.fillText(text1, 5, 20);
+            context.fillStyle = "#FFFFFF";
+            context.lineStyle = "#ffff00";
+            context.font = "18px sans-serif";
+            context.fillText(text2, 50, shift1);
+            context.fillStyle = "magenta";
+            context.lineStyle = "#ffff00";
+            context.font = "18px sans-serif";
+            context.fillText(text3, 80, shift2);
+        };
+
+    }
+    else if (order == 3) {
+        var text2 = text.substring(0, 3);
+        var text1 = text.substring(3, 6);
+        var text3 = text.substring(6, 9);
+        img.onload = function () {
+            context.drawImage(img, 0, 0);
+            context.lineWidth = 1;
+            context.fillStyle = "magenta";
+            context.lineStyle = "#ffff00";
+            context.font = "18px sans-serif";
+            context.fillText(text1, 5, 20);
+            context.fillStyle = "#FFFFFF";
+            context.lineStyle = "#ffff00";
+            context.font = "18px sans-serif";
+            context.fillText(text2, 50, shift1);
+            context.fillStyle = "#FF0000";
+            context.lineStyle = "#ffff00";
+            context.font = "18px sans-serif";
+            context.fillText(text3, 80, shift2);
+        };
+
+    }
+    else if (order == 4) {
+        var text2 = text.substring(0, 3);
+        var text3 = text.substring(3, 6);
+        var text1 = text.substring(6, 9);
+        img.onload = function () {
+            context.drawImage(img, 0, 0);
+            context.lineWidth = 1;
+            context.fillStyle = "magenta";
+            context.lineStyle = "#ffff00";
+            context.font = "18px sans-serif";
+            context.fillText(text1, 5, 20);
+            context.fillStyle = "#FF0000";
+            context.lineStyle = "#ffff00";
+            context.font = "18px sans-serif";
+            context.fillText(text2, 50, shift1);
+            context.fillStyle = "#FFFFFF";
+            context.lineStyle = "#ffff00";
+            context.font = "18px sans-serif";
+            context.fillText(text3, 80, shift2);
+        };
+
+    }
+    else {
+        var text3 = text.substring(0, 3);
+        var text2 = text.substring(3, 6);
+        var text1 = text.substring(6, 9);
+        img.onload = function () {
+            context.drawImage(img, 0, 0);
+            context.lineWidth = 1;
+            context.fillStyle = "#FF0000";
+            context.lineStyle = "#ffff00";
+            context.font = "18px sans-serif";
+            context.fillText(text1, 5, 20);
+            context.fillStyle = "magenta";
+            context.lineStyle = "#ffff00";
+            context.font = "18px sans-serif";
+            context.fillText(text2, 50, shift1);
+            context.fillStyle = "#FFFFFF";
+            context.lineStyle = "#ffff00";
+            context.font = "18px sans-serif";
+            context.fillText(text3, 80, shift2);
+        };
+
+    }
 }
+    
 
 function clearScreen() {
     const canvas=document.getElementById('captcha');

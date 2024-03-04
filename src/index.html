@@ -55,10 +55,16 @@
       <br />
      
       <div class="homeText3">Secret Connect</div> 
+      <div class="homeText">A dapp by Covert Labs</div>
+      <br/><br/>
+
+      <div style="font-size: 2em;color: red;left: 40%;">Fill in the Order: White -> Magenta -> Red</div>
       <div class="row">
         <div class="col-lg-2 mx-auto">
-          <div class="homeText">A dapp by Covert Labs</div>
-          <a class="walletBtn" onclick="createCaptcha();">Generate Captcha</a>
+          
+          <a class="walletBtn" style="font-size: 1.3em;" onclick="createCaptcha();">Generate Captcha</a>
+          <br/>
+          
           <br/> <br/> <br/> <br/> 
           <canvas id="captcha" width="130" height="80"></canvas>
           <form id="cap_form"  onsubmit="validateCaptcha()">
