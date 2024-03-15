@@ -9,6 +9,7 @@
     "dependencies": {
         "axios": "^1.6.7",
         "crypto-js": "^4.2.0",
+        "freecaptcha": "^1.2.2",
         "leaflet": "^1.9.3",
         "path-browserify": "^1.0.1",
         "vue-recaptcha": "^2.0.3",
