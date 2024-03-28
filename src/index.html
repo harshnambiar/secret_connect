@@ -43,7 +43,7 @@
     />
     <link rel="stylesheet" href="./main.css" />
   </head>
-  <body class="home">
+  <body class="home" onload="resetCaptcha();">
     <div class="pageHeader homeHeader">
       <a class="walletBtn" onclick="connect_keplr();">Keplr</a>   
       <a class="walletBtn" onclick="connect_leap();">Leap</a>  
@@ -69,10 +69,10 @@
           
           <br/> <br/> 
           <canvas id="captcha" width="200" height="100"></canvas>
-          <form id="cap_form"  onsubmit="validateCaptcha()">
+          <form id="cap_form">
             
-            <input type="text" placeholder="Captcha" id="cpatchaTextBox"/><br/><br/>
-            <button type="submit">Submit</button>
+            <input type="text" placeholder="Captcha" id="captchaTextBox"/><br/><br/>
+            <button type="button" onclick="validateCaptcha()">Submit</button>
           </form>
         </div>
       </div>

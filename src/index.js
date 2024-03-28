@@ -71,6 +71,29 @@ async function generateCaptcha() {
     var el = document.getElementById('captcha');
     var captcha_val = createCaptcha(el);
     console.log(captcha_val);
+    localStorage.setItem("cap_key", captcha_val);
    }
   window.generateCaptcha = generateCaptcha;
 
+
+  async function validateCaptcha() {
+    var captcha_val = localStorage.getItem("cap_key");
+    console.log(captcha_val);
+    var input_val = document.getElementById("captchaTextBox").value;
+    console.log(input_val);
+    if (input_val == captcha_val){
+        console.log("true");
+        return 1;
+    }
+    else {
+        console.log("false");
+        return 0;
+    }
+   }
+  window.validateCaptcha = validateCaptcha;
+
+
+  async function resetCaptcha(){
+    localStorage.setItem("cap_key", "");
+  }
+  window.resetCaptcha = resetCaptcha;
